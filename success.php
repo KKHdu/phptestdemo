@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:Location="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
-	<?php
-         $name = $_POST["username"];
-         $pwd = $_POST["pwd"];
-         $fp = fopen("./data.txt", "a");
-         $str = "user:".$name."&password:".$pwd."\r\n";
-         fwrite($fp,$str);
-         fclose($fp);
-         echo "<h1>欢迎回来,".$name."！</h1>";
-     ?>
-     <form>
-          用户名：<input type="text" name="username" value=><br/><br/>
-         密码：<input type="password" name="pwd"><br/><br/>
-         <input type="submit" name="submit" value="提交">
-         <table><td>$name</td><td>$pwd</td></table>
-     </form>
+	<h1>欢迎回来</h1>
+    <input type="button" value="跳转" onclick="tiao('login.php')"/>
+    <input type="button" value="tiaozhuan" onclick="window.location.href='login.php'">
 </body>
 </html>
+<script>
+    function tiao(urls){
+        window.location.href=urls;//根据传过来的地址跳转
+    }
+</script>
