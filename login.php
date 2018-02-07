@@ -31,8 +31,8 @@ if (!$link){
         $query = "select * from user where name = '{$_POST['name']}' and pw = '{$_POST['pw']}'";
         $result = mysqli_query($link, $query);
         if (mysqli_num_rows($result) == 1){
-            echo "<script>alert('登陆成功')</script>";
-            // header("Location:index.php");
+            echo "<script>alert('登陆成功，“点击跳转页面”。')</script>";
+            header("Location:success.php");
         }
     }
 }
