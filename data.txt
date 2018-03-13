@@ -2,3 +2,4 @@
 user:kko&password:123
 user:kko&password:
 user:kkook&password:kkook
+user:&password:

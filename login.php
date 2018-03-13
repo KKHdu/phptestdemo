@@ -22,7 +22,9 @@
 <button type="submit" name="submit">login</button>
 </form>
 
-<?php 
+<?php
+session_start();  //开启session
+
 $link = mysqli_connect('localhost', 'root', 'ZXCVBNM', 'testsql');
 if (!$link){
     echo"<script>alert('数据库连接失败！')</script>";
@@ -32,10 +34,13 @@ if (!$link){
         $result = mysqli_query($link, $query);
         if (mysqli_num_rows($result) == 1){
             echo "<script>alert('登陆成功，“点击跳转页面”。')</script>";
-            header("Location:success.php");
+            header("Location:test.php");
+
+            $_SESSION['name'] = $_POST['name']; //登陆成功之后保存session
         }
     }
 }
+
 ?>
 </body>
 </html>
