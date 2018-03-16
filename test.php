@@ -16,9 +16,9 @@ echo "用户名：<a>" . $_SESSION['name'] . "</a>" ?>
 <form action="test.php" method="get">
     id：<input type="text" name="id" value="<?php //引用conn.php文件
     require 'conn.php'; echo $_GET['id']?>" size="8">
-    用户名<input type="text" name="name" value="<?php //引用conn.php文件
+    名:<input type="text" name="name" value="<?php //引用conn.php文件
     require 'conn.php'; echo $_GET['name']?>" size="8">
-    年龄：<input type="text" name="type1" value="<?php //引用conn.php文件
+    type1：<input type="text" name="type1" value="<?php //引用conn.php文件
     require 'conn.php'; echo $_GET['type1']?>" size="8">
     <input type="button" value="查看全部" onclick="window.location='test.php'">
     <input type="submit" value="搜索">
@@ -43,7 +43,7 @@ echo "用户名：<a>" . $_SESSION['name'] . "</a>" ?>
     <form action="test.php" method="get">
         <tr>
             <td><?php echo $row['id'] ?></td>
-            <td><input type="text" name="name" value="<?php echo $row['name'] ?>"/>
+            <td><input type="text" name="totype1" value="<?php echo $row['name'] ?>"/>
                 <input type="submit" value="搜索"></td>
             <td><?php echo $row['type1'] ?></td>
             <td><?php echo $row['type2'] ?></td>

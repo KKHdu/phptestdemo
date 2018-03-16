@@ -18,6 +18,12 @@ if(!empty($_GET['type1']))
     $wherelist[]=" type1 like '%".$_GET['type1']."%'";
     $urllist[]="type1=".$_GET['type1'];
 }
+if(!empty($_GET['totype1']))
+{
+    //$wherelist[]=" name like '%".$_GET['totype1']."%'";
+    $wherelist[]=" type1 like (SELECT type1 FROM test WHERE name='".$_GET['totype1']."')";
+    $urllist[]="name=".$_GET['totype1'];
+}
 $where="";
 if(count($wherelist)>0)
 {
