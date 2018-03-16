@@ -1,7 +1,7 @@
 <?php
 ini_set("error_reporting","E_ALL & ~E_NOTICE");
 
-$con = mysqli_connect("localhost","root","ZXCVBNM");
+$con = mysqli_connect("101.132.71.122","root","ZXCVBNM");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error());

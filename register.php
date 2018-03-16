@@ -27,7 +27,7 @@
 </form>
 
 <?php 
-$link = mysqli_connect('localhost', 'root', 'ZXCVBNM', 'testsql');
+$link = mysqli_connect('101.132.71.122', 'root', 'ZXCVBNM', 'testsql');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }else {

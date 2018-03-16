@@ -25,7 +25,7 @@
 <?php
 session_start();  //开启session
 
-$link = mysqli_connect('localhost', 'root', 'ZXCVBNM', 'testsql');
+$link = mysqli_connect('101.132.71.122', 'root', 'ZXCVBNM', 'testsql');
 if (!$link){
     echo"<script>alert('数据库连接失败！')</script>";
 }else {

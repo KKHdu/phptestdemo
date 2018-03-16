@@ -32,7 +32,7 @@ if(count($wherelist)>0)
 }
 //分页的实现原理
 //1.获取数据表中总记录数
-$mysql_server_name='localhost';
+$mysql_server_name='101.132.71.122';
 $mysql_username='root';
 $mysql_password='ZXCVBNM';
 $conn=mysqli_connect($mysql_server_name,$mysql_username,$mysql_password);
